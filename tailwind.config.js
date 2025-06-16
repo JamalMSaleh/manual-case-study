@@ -51,7 +51,7 @@ module.exports = {
         "button-primary": "#7E0707", 
         "button-hover": "#5A0505", 
         "button-active": "#4A0404", 
-        
+
         accent: "#0B3B3C",
         muted: "#6D8A83",
         surface: "#E8EFE9",
@@ -60,7 +60,7 @@ module.exports = {
           sans: 'var(--font-tt-norms)',
       },
       fontSize: {
-        xs: ["0.75rem", { lineHeight: "1rem" }], // Super small text
+        xs: ["0.65rem", { lineHeight: "1rem" }], // Super small text
         sm: ["0.875rem", { lineHeight: "1.25rem" }], // Small text
         base: ["1rem", { lineHeight: "1.5rem" }], // Base text
         lg: ["1.125rem", { lineHeight: "1.75rem" }], // Large text
@@ -68,6 +68,7 @@ module.exports = {
         "2xl": ["1.5rem", { lineHeight: "2rem" }], // Headings
         "3xl": ["1.875rem", { lineHeight: "2.25rem" }], // Large headings
         "4xl": ["2.25rem", { lineHeight: "2.5rem" }], // Hero headings
+        "7xl": ["90px", { lineHeight: "90px" }], // Hero headings
       },
       borderRadius: {
         lg: "var(--radius)",

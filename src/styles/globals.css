@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font Face */
+@font-face {
+  font-family: "TT Norms";
+  src: url("/fonts/TTNorms/TTNorms-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Norms";
+  src: url("/fonts/TTNorms/TTNorms-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* CSS Variables */
+:root {
+  /* Text Colors */
+  --color-text-primary: #0b3b3c;
+  --color-text-secondary: #6d8a83;
+
+  /* Background Colors */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #e8efe9;
+
+  /* Button Colors */
+  --color-button-primary: #7e0707;
+  --color-button-hover: #5a0505;
+  --color-button-active: #4a0404;
+
+  /* Additional semantic colors */
+  --color-accent: #0b3b3c;
+  --color-muted: #6d8a83;
+  --color-surface: #e8efe9;
+}
+
+/* Base styles */
+@layer base {
+  body {
+    @apply bg-bg-primary text-text-primary;
+    font-family: "TT Norms";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-text-primary font-semibold;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  h5 {
+    @apply text-lg;
+  }
+
+  h6 {
+    @apply text-base;
+  }
+}
+
+/* Component styles */
+@layer components {
+  .text-hero {
+    @apply text-text-primary text-4xl font-bold;
+  }
+
+  .text-title {
+    @apply text-text-primary text-2xl font-semibold;
+  }
+
+  .text-label {
+    @apply text-text-primary text-sm font-medium;
+  }
+
+  .text-body {
+    @apply text-text-primary text-base;
+  }
+
+  .text-small {
+    @apply text-text-secondary text-sm;
+  }
+
+  .text-tiny {
+    @apply text-text-secondary text-xs;
+  }
+
+  .btn-primary {
+    @apply bg-button-primary hover:bg-button-hover active:bg-button-active text-white font-medium px-4 py-2 rounded-md transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-bg-secondary hover:bg-text-secondary/10 text-text-primary font-medium px-4 py-2 rounded-md border border-text-secondary/20 transition-colors duration-200;
+  }
+
+  .surface {
+    @apply bg-bg-secondary;
+  }
+}

@@ -51,7 +51,9 @@ module.exports = {
 
         "button-primary": "#7E0707", 
         "button-hover": "#5A0505", 
-        "button-active": "#4A0404", 
+        "button-active": "#4A0404",
+        
+        "border-primary": "#BDCDC5",
 
         accent: "#0B3B3C",
         muted: "#6D8A83",

@@ -47,6 +47,7 @@ module.exports = {
 
         "bg-primary": "#ffffff", 
         "bg-secondary": "#E8EFE9", 
+        "bg-numbers": "#F3F7F4",
 
         "button-primary": "#7E0707", 
         "button-hover": "#5A0505", 
@@ -68,6 +69,7 @@ module.exports = {
         "2xl": ["1.5rem", { lineHeight: "2rem" }], // Headings
         "3xl": ["1.875rem", { lineHeight: "2.25rem" }], // Large headings
         "4xl": ["2.25rem", { lineHeight: "2.5rem" }], // Hero headings
+        "4xl": ["2.5rem", { lineHeight: "2.75rem" }], // Hero headings
         "7xl": ["90px", { lineHeight: "90px" }], // Hero headings
       },
       borderRadius: {

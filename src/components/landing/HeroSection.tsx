@@ -21,10 +21,10 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[600px]">
           <div className="space-y-8">
             <div className="pb-4 whitespace-nowrap">
-              <h1 className="text-5xl lg:text-7xl font-bold tracking-tight">
+              <h1 className="text-5xl lg:text-7xl font-normal tracking-tight">
                 Be good
               </h1>
-              <h1 className="text-5xl lg:text-7xl font-bold tracking-tight">
+              <h1 className="text-5xl lg:text-7xl font-normal tracking-tight">
                 to yourself
               </h1>
             </div>

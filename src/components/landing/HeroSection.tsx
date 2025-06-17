@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Button } from "@mui/material";
 
-export default function HeroSection() {
+const HeroSection = () => {
   return (
     <section className="w-full overflow-hidden bg-[url('/images/hero-bg.jpg')] bg-no-repeat bg-left-top bg-cover">
       <div className="container mx-auto px-6 pt-16">
@@ -55,4 +55,5 @@ export default function HeroSection() {
       </div>
     </section>
   );
-}
+};
+export default HeroSection;

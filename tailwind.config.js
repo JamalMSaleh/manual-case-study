@@ -67,7 +67,7 @@ module.exports = {
         lg: ["1.125rem", { lineHeight: "1.75rem" }], // Large text
         xl: ["1.25rem", { lineHeight: "1.75rem" }], // Extra large
         "2xl": ["1.5rem", { lineHeight: "2rem" }], // Headings
-        "3xl": ["1.875rem", { lineHeight: "2.25rem" }], // Large headings
+        "3xl": ["1.75rem", { lineHeight: "2.25rem" }], // Large headings
         "4xl": ["2.25rem", { lineHeight: "2.5rem" }], // Hero headings
         "4xl": ["2.5rem", { lineHeight: "2.75rem" }], // Hero headings
         "7xl": ["90px", { lineHeight: "90px" }], // Hero headings

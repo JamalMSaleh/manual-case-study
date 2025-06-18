@@ -1,23 +1,90 @@
 # Manual Landing Page Case Study
 
-This project is a frontend coding assignment for Manual.
+This project is a frontend coding assignment for **Manual**.
 
-The goal is to build a responsive, single-page landing page using **Next.js (App Router)** and **Redux**. The page includes a full-screen quiz rendered dynamically from a JSON API.
+The goal is to build a responsive, single-page landing page using **Next.js (App Router)**. The page includes a full-screen quiz rendered dynamically from a remote JSON API and designed to help users determine if the product is right for them.
 
-## Tech Stack
+Live site: [https://manual-case-study-eosin.vercel.app/](https://manual-case-study-eosin.vercel.app/)
 
-- Next.js (App Router)
-- React
-- Redux
-- TypeScript
-- Tailwind CSS (with TT Norms font)
-- Jest + React Testing Library (for unit tests)
+---
 
-## Features
+## 🛠 Tech Stack
 
-- Responsive landing page based on Figma mockup
-- Full-screen quiz overlay
-- Dynamic question loading via HTTP
-- Rejection and success messages based on quiz answers
+- **Next.js (App Router)**
+- **React** (with Context API)
+- **TypeScript**
+- **Tailwind CSS**
+- **React Testing Library**
+- **TT Norms** font (free version)
 
-More details will be added later.
+---
+
+## ✨ Features
+
+- **Responsive landing page** based on a provided Figma mockup
+- **Mobile-first design**: Layout scales from small screens upwards
+- **Full-screen quiz overlay** triggered via "Take the Quiz" CTA
+- **Dynamic question loading** from an external JSON endpoint
+- **Immediate rejection detection** via `isRejection` logic
+- **Success message** if user completes all steps without rejection
+- **Answer persistence** via `localStorage`—quiz progress is saved even if the user refreshes or leaves the page
+- **Client-side state management** using React Context instead of Redux
+
+---
+
+## 🧠 State Management
+
+The quiz logic is managed using the **React Context API**, which keeps track of:
+
+- The current quiz step
+- User-selected answers
+- Result state (success or rejection)
+
+All answers are also synced with `localStorage` to persist state between sessions.
+
+---
+
+## 🧪 Testing
+
+Unit tests are written with **React Testing Library** Covered scenarios include:
+
+to be added
+
+---
+
+## 🌐 Deployment
+
+- Deployed via **Vercel** with automated builds and previews.
+- Production URL: [https://manual-case-study-eosin.vercel.app/](https://manual-case-study-eosin.vercel.app/)
+
+---
+
+## ♿ Accessibility & Performance
+
+- Semantic HTML and appropriate ARIA roles where necessary
+- Full keyboard navigation supported
+- Quiz images include `alt` text from the API
+- Fast-loading SPA experience with minimal page transitions
+- Built-in Next.js performance optimizations and lazy loading
+
+---
+
+## 📁 Assets & Fonts
+
+- Design based on Figma:  
+  [Landing Page Mockup](https://www.figma.com/file/6k8OY18TEGeO07Fpol86QM/Landing-Page---Exercise?node-id=1%3A2)
+- TT Norms (free alternative):  
+  [Download](https://font.download/font/tt-norms)
+
+---
+
+## 📄 Project Notes
+
+- Built as a **single-page application**: no full-page reloads or navigation
+- Improvised mobile layout due to lack of mobile Figma mocks
+- Focused on balancing UX simplicity with technical clarity
+- All Answers persist between sessions
+## 🧾 Note
+
+I used **GitHub Issues** and **PRs** to structure and document my development process.  
+If you're reviewing this project, I highly recommend checking the **Issues tab** to follow my thought process, feature breakdown, and implementation decisions in context.

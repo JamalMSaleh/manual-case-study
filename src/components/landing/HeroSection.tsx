@@ -3,7 +3,11 @@
 import Image from "next/image";
 import { Button } from "@mui/material";
 
-const HeroSection = () => {
+const HeroSection = ({
+  setQuizVisibility,
+}: {
+  setQuizVisibility: (visible: boolean) => void;
+}) => {
   return (
     <section className="w-full overflow-hidden bg-[url('/images/hero-bg.svg')] bg-no-repeat bg-left-top bg-cover">
       <div className="container mx-auto px-6 pt-16">
@@ -47,6 +51,7 @@ const HeroSection = () => {
             font-medium 
             normal-case
           "
+              onClick={() => setQuizVisibility(true)}
             >
               Take the Quiz
             </Button>

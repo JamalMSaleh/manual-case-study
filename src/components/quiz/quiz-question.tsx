@@ -19,7 +19,7 @@ export function QuizQuestionComponent({
       <div
         className={`grid gap-4 md:gap-6 max-w-3xl mx-auto ${
           question.options[0].parsedDisplay?.type === "image"
-            ? "grid-cols-3"
+            ? "md:grid-cols-3"
             : ""
         }`}
       >

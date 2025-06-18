@@ -9,7 +9,7 @@ import { QuizData } from "@/types/quiz";
 import { useEffect, useState } from "react";
 
 export default function HomePage() {
-  const [state, setState] = useState<boolean>(false);
+  const [showQuiz, setShowQuiz] = useState<boolean>(false);
   const [quizData, setQuizData] = useState<QuizData>({} as QuizData);
   useEffect(() => {
     const fetchData = async () => {
@@ -21,9 +21,9 @@ export default function HomePage() {
   }, []);
   return (
     <>
-      {!state ? (
+      {!showQuiz ? (
         <div>
-          <HeroSection setQuizVisibility={setState} />
+          <HeroSection setShowQuiz={setShowQuiz} />
           <div className="mt-20">
             <FeaturesSection />
           </div>
@@ -32,7 +32,7 @@ export default function HomePage() {
           </div>
         </div>
       ) : (
-        <Quiz quizData={quizData} setQuizVisibility={setState} />
+        <Quiz quizData={quizData} setShowQuiz={setShowQuiz} />
       )}
     </>
   );

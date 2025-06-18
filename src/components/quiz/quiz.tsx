@@ -11,10 +11,10 @@ import { useQuiz } from "@/context/quizContext";
 
 const Quiz = ({
   quizData,
-  setQuizVisibility,
+  setShowQuiz,
 }: {
   quizData: QuizData;
-  setQuizVisibility: (visible: boolean) => void;
+  setShowQuiz: (visible: boolean) => void;
 }) => {
   const { state, dispatch } = useQuiz();
   const [showResult, setShowResult] = useState(false);
@@ -53,14 +53,14 @@ const Quiz = ({
   const handleBack = () => {
     if (showResult) {
       setShowResult(false);
-      setQuizVisibility(false);
+      setShowQuiz(false);
       return;
     }
 
     if (state.step > 0) {
       dispatch({ type: "GO_BACK" });
     } else {
-      setQuizVisibility(false);
+      setShowQuiz(false);
     }
   };
 
@@ -92,11 +92,7 @@ const Quiz = ({
               </Button>
             </div>
           )}
-          <QuizResult
-            setQuizVisibility={setQuizVisibility}
-            isRejected={state.rejected}
-            onRestart={handleRestart}
-          />
+          <QuizResult isRejected={state.rejected} onRestart={handleRestart} />
         </div>
       </div>
     );

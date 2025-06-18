@@ -7,14 +7,9 @@ import Link from "next/link";
 interface QuizResultProps {
   isRejected: boolean;
   onRestart: () => void;
-  setQuizVisibility: (visible: boolean) => void;
 }
 
-const QuizResult = ({
-  isRejected,
-  onRestart,
-  setQuizVisibility,
-}: QuizResultProps) => {
+const QuizResult = ({ isRejected, onRestart }: QuizResultProps) => {
   return (
     <div className="max-w-2xl mx-auto text-center space-y-8">
       <div className="space-y-6">

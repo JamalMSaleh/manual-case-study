@@ -4,9 +4,9 @@ import Image from "next/image";
 import { Button } from "@mui/material";
 
 const HeroSection = ({
-  setQuizVisibility,
+  setShowQuiz,
 }: {
-  setQuizVisibility: (visible: boolean) => void;
+  setShowQuiz: (visible: boolean) => void;
 }) => {
   return (
     <section className="w-full overflow-hidden bg-[url('/images/hero-bg-cropped.jpg')] lg:bg-[url('/images/hero-bg.svg')] bg-no-repeat bg-left-top bg-cover">
@@ -51,7 +51,7 @@ const HeroSection = ({
             font-medium 
             normal-case
           "
-              onClick={() => setQuizVisibility(true)}
+              onClick={() => setShowQuiz(true)}
             >
               Take the Quiz
             </Button>

@@ -30,14 +30,14 @@ const FeaturesSection = () => {
             </p>
             <div>
               <h3 className="text-3xl font-bold text-text-primary leading-tight">
-                Hair loss needn't
+                Hair loss needn&rsquo;t
               </h3>
               <h3 className="text-3xl  font-bold text-text-primary leading-tight">
                 be irreversible. We can help!
               </h3>
             </div>
             <p className="text-lg text-text-primary leading-relaxed">
-              We're working around the clock to bring you a holistic approach to
+              We&rsquo;re working around the clock to bring you a holistic approach to
               your wellness. From top to bottom, inside and out.
             </p>
           </div>

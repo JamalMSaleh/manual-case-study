@@ -46,11 +46,25 @@ All answers are also synced with `localStorage` to persist state between session
 
 ## 🧪 Testing
 
-Unit tests are written with **React Testing Library** Covered scenarios include:
+This project uses **Jest** and **React Testing Library** to test UI interactions, reducer logic, and data fetching.
 
-to be added
+### ✅ What’s Covered
 
----
+- **Quiz Component**: Simulates user flow, including rejection paths and progression logic.
+- **Reducer**: Pure unit tests validate state transitions (`ANSWER_QUESTION`, `GO_NEXT`, `GO_BACK`, `RESET_QUIZ`).
+- **API Parsing**: Tests `fetchQuizData()` for correct parsing of HTML-based options and graceful handling of failed fetches.
+
+### 🧼 Setup Highlights
+
+- `localStorage` is cleared before each test to ensure isolation.
+- `global.fetch` is mocked for API tests.
+- Tests run with `jest-dom` matchers for enhanced assertions.
+
+### ▶️ Run Tests
+
+```bash
+npm test
+```
 
 ## 🌐 Deployment
 

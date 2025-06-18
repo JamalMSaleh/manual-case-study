@@ -9,7 +9,7 @@ const HeroSection = ({
   setQuizVisibility: (visible: boolean) => void;
 }) => {
   return (
-    <section className="w-full overflow-hidden bg-[url('/images/hero-bg.svg')] bg-no-repeat bg-left-top bg-cover">
+    <section className="w-full overflow-hidden bg-[url('/images/hero-bg-cropped.jpg')] lg:bg-[url('/images/hero-bg.svg')] bg-no-repeat bg-left-top bg-cover">
       <div className="container mx-auto px-6 pt-16">
         <div className="mb-16">
           <div className="w-12 h-12 flex items-center justify-center">

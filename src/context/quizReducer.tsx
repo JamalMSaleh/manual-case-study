@@ -35,11 +35,12 @@ export const quizReducer = (
 
       const isRejected = action.payload.selectedOption.isRejection;
 
-      return {
+      const result = {
         ...state,
         answers: updatedAnswers,
         rejected: isRejected ? true : state.rejected,
       };
+      return result;
     }
 
     case "GO_NEXT":

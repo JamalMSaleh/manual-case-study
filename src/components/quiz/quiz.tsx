@@ -84,7 +84,7 @@ const Quiz = ({
 
   useEffect(() => {
     console.log(state.step, currentAnswer, quizData.questions.length);
-    if (state.step == quizData.questions.length && currentAnswer != null) {
+    if (state.step == quizData.questions.length) {
       setShowResult(true);
     }
   }, []);

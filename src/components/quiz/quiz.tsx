@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { QuizData, QuizOption } from "../../types/quiz";
-import { ChevronLeft } from "@mui/icons-material";
+import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import { QuizProgress } from "./quiz-progress";
 import { QuizQuestionComponent } from "./quiz-question";
@@ -44,6 +44,7 @@ const Quiz = ({
     setTimeout(() => {
       if (state.step === quizData.questions.length - 1) {
         setShowResult(true);
+        dispatch({ type: "GO_NEXT" });
       } else {
         dispatch({ type: "GO_NEXT" });
       }
@@ -63,7 +64,19 @@ const Quiz = ({
       setShowQuiz(false);
     }
   };
+  const handleNext = () => {
+    if (showResult) {
+      setShowResult(false);
+      setShowQuiz(false);
+      return;
+    }
 
+    if (state.step < 2) {
+      dispatch({ type: "GO_NEXT" });
+    } else {
+      setShowQuiz(false);
+    }
+  };
   const handleRestart = () => {
     dispatch({ type: "RESET_QUIZ" });
     setShowResult(false);
@@ -71,7 +84,7 @@ const Quiz = ({
 
   useEffect(() => {
     console.log(state.step, currentAnswer, quizData.questions.length);
-    if (state.step == quizData.questions.length - 1 && currentAnswer != null) {
+    if (state.step == quizData.questions.length && currentAnswer != null) {
       setShowResult(true);
     }
   }, []);
@@ -110,13 +123,22 @@ const Quiz = ({
         </div>
 
         {/* Back button */}
-        <div className="mb-8">
+        <div className="flex justify-between mb-8">
           <Button
             onClick={handleBack}
             className="flex items-center gap-2 text-gray-600 hover:text-gray-900"
           >
             <ChevronLeft className="h-4 w-4" />
             Back
+          </Button>
+          <Button
+            onClick={handleNext}
+            className={`${
+              state.step == 2 || !currentAnswer ? "!hidden" : ""
+            } flex items-center gap-2 text-gray-600 hover:text-gray-900`}
+          >
+            Next
+            <ChevronRight className="h-4 w-4" />
           </Button>
         </div>
 

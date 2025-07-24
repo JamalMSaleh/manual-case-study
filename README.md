@@ -1,5 +1,7 @@
 # Manual Landing Page Case Study
 
+This project is a frontend coding assignment for **Manual**.
+
 The goal is to build a responsive, single-page landing page using **Next.js (App Router)**. The page includes a full-screen quiz rendered dynamically from a remote JSON API and designed to help users determine if the product is right for them.
 
 Live site: [https://manual-case-study-eosin.vercel.app/](https://manual-case-study-eosin.vercel.app/)
